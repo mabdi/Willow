@@ -21,19 +21,9 @@ WebComponentInteractionTest >> testNeverTriggered [
 
 { #category : #tests }
 WebComponentInteractionTest >> testTriggeredOnChange [
-	"self
+	self
 		assert: WebComponentInteraction triggeredOnChange class
-		equals: WebComponentInteraction."
-	| interaction html |
-
-	interaction := WebComponentInteraction triggeredOnChange.
-	html := self
-		renderUsing: [ :canvas | 
-			| component |
-
-			component := canvas textInput.
-			interaction applyTo: component on: canvas ].
-	self assert: html equals: '<input type="text"/>'
+		equals: WebComponentInteraction.
 ]
 
 { #category : #tests }
