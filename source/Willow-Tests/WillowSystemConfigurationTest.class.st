@@ -7,6 +7,13 @@ Class {
 	#category : #'Willow-Tests-Applications'
 }
 
+{ #category : #tests }
+WillowSystemConfigurationTest >> testDeploymentModeClassKey [
+	self
+		assert: WillowSystemConfiguration deploymentModeClassKey
+		equals: #deploymentModeClass
+]
+
 { #category : #'tests-description' }
 WillowSystemConfigurationTest >> testDescribeOn [
 
@@ -21,4 +28,11 @@ WillowSystemConfigurationTest >> testDescribeOn [
 	self
 		assert: attribute default equals: 'en';
 		assert: attribute comment equals: 'The language of the application ("en" if absent)'
+]
+
+{ #category : #tests }
+WillowSystemConfigurationTest >> testLanguageKey [
+	self
+		assert: WillowSystemConfiguration languageKey
+		equals: #language
 ]

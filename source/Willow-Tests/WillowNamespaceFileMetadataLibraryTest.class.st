@@ -46,6 +46,14 @@ var Willow;if(Willow===undefined){Willow={"version":"8.0.1","handleAjaxErrorCall
 ]
 
 { #category : #tests }
+WillowNamespaceFileMetadataLibraryTest >> testSelectorsToInclude [
+
+	self
+		assert: WillowNamespaceFileMetadataLibrary default selectorsToInclude class
+		equals: Array
+]
+
+{ #category : #tests }
 WillowNamespaceFileMetadataLibraryTest >> testTesting [
 
 	self
